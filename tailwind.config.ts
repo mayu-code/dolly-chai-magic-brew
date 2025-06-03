@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,11 +85,46 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'steam-rise': {
+					'0%': {
+						opacity: '0.8',
+						transform: 'translateY(0px) scale(1)'
+					},
+					'50%': {
+						opacity: '0.4',
+						transform: 'translateY(-20px) scale(1.2)'
+					},
+					'100%': {
+						opacity: '0',
+						transform: 'translateY(-40px) scale(1.5)'
+					}
+				},
+				'chai-bubble': {
+					'0%, 100%': {
+						transform: 'scale(1)'
+					},
+					'50%': {
+						transform: 'scale(1.1)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'steam-rise': 'steam-rise 2s ease-out infinite',
+				'chai-bubble': 'chai-bubble 1s ease-in-out infinite'
 			}
 		}
 	},
